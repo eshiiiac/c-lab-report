@@ -1,0 +1,59 @@
+int main(){
+    int a;
+    printf("enter a num: ");
+    scanf("%d",&a);
+    
+    if(a%2==0){
+        printf("%d is even",a);
+    }
+    else{
+        printf("%d is odd",a);
+    }
+    return 0;
+}
+int main(){
+    int a,b;
+    printf("enter 2 nums: ");
+    scanf("%d%d",&a,&b);
+    if(a>b){
+        printf("%d is smailler then %d",b,a);
+    }
+    else{
+        printf("%d is smaller than %d",a,b);
+    }
+    return 0;
+}
+int main(){
+    int a,b,c;
+    printf("enter 3 nums: ");
+    scanf("%d%d%d",&a,&b,&c);
+    
+    if (a>b && a<c || a<b && a>c){
+        printf("%d is middle num",a);
+    }    
+    else if(b>a && b<c || b<a && b>c){
+        printf("%d is middle num",b);
+    }
+    else{
+        printf("%d is middle num",c);
+    }
+    return 0;
+}
+int main(){
+    int u;
+    printf("enter electricity  unit: ");
+    scanf("%d",&u);
+    if(u<=20){
+        printf("Amount is %d",u*0);
+    }
+    else if(u<=100 && u>20){
+        printf("Amount is %d",u*12);
+    }
+    else if(u<220 && u>100){
+        printf("Amount is %d",u*11);
+    }
+    else if(u>=220){
+        printf("Amount is %d",u*10);
+    }
+    return 0;
+}
