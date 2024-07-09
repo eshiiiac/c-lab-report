@@ -1,40 +1,39 @@
-// Online C compiler to run C program online
 #include <stdio.h>
 #include <math.h>
-// int main() {
-//   float r;
-//   printf("enter radius of circle: ");
-//   scanf("%f",&r);
-//   printf("area is %.1f",r*r*3.14);
-//     return 0;
-// }
-//int main(){
-//     float temp;
-//     printf("enter temperature in farenheit: ");
-//     scanf("%f",&temp) ;
-//     printf("%.1f",5.0/9*(temp - 32));
-//     return 0;
-// }
-// int main(){
-//     float a;
-//     printf("enter a num: ");
-//     scanf("%f",&a);
-//     printf("square root of %.1f is %.1f",a,sqrt(a));
-//     return 0;
-// }
-// int main(){
-//     int a,b,c;
-//     printf("enter 3 nums: ");
-//     scanf("%d%d%d",&a,&b,&c);
-//     printf("Average is: %d",(a+b+c)/3);
-//     return 0;
-// }
-// int main(){
-//     int a,b,a2,b2;
-//     printf("enter 2 nums: ");
-//     scanf("%d%d",&a,&b);
-//     printf("cube of %d is %d",a,a2=pow(a,3));
-//     printf("\nsquare of %d is %d", b,b2=pow(b,2));
-//     printf("\nsum of cube of %d and square of %d is %d",a,b,a2+b2);
-//     return 0;
-// }
+int main() {
+  float r;
+  printf("enter radius of circle: ");
+  scanf("%f",&r);
+  printf("area is %.1f",r*r*3.14);
+    return 0;
+}
+int main(){
+    float temp;
+    printf("enter temperature in farenheit: ");
+    scanf("%f",&temp) ;
+    printf("%.1f",5.0/9*(temp - 32));
+    return 0;
+}
+int main(){
+    float a;
+    printf("enter a num: ");
+    scanf("%f",&a);
+    printf("square root of %.1f is %.1f",a,sqrt(a));
+    return 0;
+}
+int main(){
+    int a,b,c;
+    printf("enter 3 nums: ");
+    scanf("%d%d%d",&a,&b,&c);
+    printf("Average is: %d",(a+b+c)/3);
+    return 0;
+}
+int main(){
+    int a,b,a2,b2;
+    printf("enter 2 nums: ");
+    scanf("%d%d",&a,&b);
+    printf("cube of %d is %d",a,a2=pow(a,3));
+    printf("\nsquare of %d is %d", b,b2=pow(b,2));
+    printf("\nsum of cube of %d and square of %d is %d",a,b,a2+b2);
+    return 0;
+}
