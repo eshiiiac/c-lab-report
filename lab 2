@@ -57,6 +57,25 @@ int main(){
     }
     return 0;
 }
+//5
+#include<stdio.h>
+
+int main(){
+    char n;
+	printf("ENTER ALPHABET: ");
+	scanf("%c",&n);
+	switch (n){
+	    case 'a':
+	    case 'e':
+	    case 'i':
+	    case 'o':
+	    case 'u':
+	        printf("vowel");
+	   default:
+	    printf("consonant");
+	}
+}
+
 
 //6
 #include<stdio.h>
