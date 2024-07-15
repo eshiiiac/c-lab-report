@@ -85,3 +85,34 @@ int main(){
 	}
 	return 0;
 }
+
+
+//7
+#include<stdio.h>
+
+int main(){
+	int a,b;
+	char n;
+	printf("1.add\n2.subtract\n3.mul\n4.divide");
+	printf("\nEmter choice: ");
+	scanf("%c",&n);
+	printf("\nEmter cals: ");
+	scanf("%d%d",&a,&b);
+	switch(n){
+		case '1':
+			printf("\n%d",a+b);
+			break;
+		case '2':
+			printf("\n%d",a-b);
+			break;
+		case '3':
+			printf("\n%d",a*b);
+			break;
+		case '4':
+			printf("\n%d",a/b);
+			break;
+		default:
+			printf("\nerororororor");
+	}
+	return 0;
+}
