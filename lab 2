@@ -57,3 +57,31 @@ int main(){
     }
     return 0;
 }
+
+//6
+#include<stdio.h>
+
+int main(){
+	int a,b;
+	char n;
+	
+	printf("Emter cals: ");
+	scanf("%d%c%d",&a,&n,&b);
+	switch(n){
+		case '+':
+			printf("%d",a+b);
+			break;
+		case '-':
+			printf("%d",a-b);
+			break;
+		case '*':
+			printf("%d",a*b);
+			break;
+		case '/':
+			printf("%d",a/b);
+			break;
+		default:
+			printf("erororororor");
+	}
+	return 0;
+}
