@@ -101,3 +101,119 @@ int main(){
     return 0;
 }
 ```
+```
+#include <stdio.h>
+
+int main() {
+   int i,j;
+   for(i=1;i<=5;i++){
+       for(j=1;j<=i;j++){
+           printf("%d",j);
+       }
+       printf("\n");
+   }
+
+    return 0;
+}
+```
+
+# output
+```
+1
+12
+123
+1234
+12345
+```
+
+```
+#include <stdio.h>
+
+int main() {
+   int i,j;
+   for(i=1;i<=5;i++){
+       for(j=1;j<=i;j++){
+           printf("%d",i);
+       }
+       printf("\n");
+   }
+
+    return 0;
+}
+```
+#output
+```
+1
+22
+333
+4444
+55555
+```
+
+##ascii value
+```
+#include <stdio.h>
+
+int main() {
+   char i,j;
+   for(i='a';i<='z';i++){
+       for(j='a';j<=i;j++){
+           printf("%d ",j);
+       }
+       printf("\n");
+   }
+
+
+    return 0;
+}
+```
+
+
+```
+#include <stdio.h>
+
+int main() {
+  int i,k,j,sp=5;
+  for(i=1;i<=9;i+=2){
+      for(k=1;k<=sp;k++){
+          printf(" ");
+      }
+      for(j=1;j<=i;j++){
+          printf("%d",j);
+      }
+      printf("\n");
+      sp--;
+  }
+
+
+    return 0;
+}
+
+```
+#output
+```
+     1
+    123
+   12345
+  1234567
+ 123456789
+
+```
+
+## reverse pyramid
+
+```
+int main(){
+    int i,j,k,sp=0;
+    for(i=9;i>0;i-=2){
+        for(k=0;k<=sp;k++){
+            printf(" ");
+        }
+        for(j=1;j<=i;j++){
+            printf("%d",j);
+        }
+        printf("\n");
+        sp++;
+    }
+}
+```
