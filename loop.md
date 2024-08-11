@@ -217,3 +217,29 @@ int main(){
     }
 }
 ```
+
+```
+#include <stdio.h>
+
+int main() {
+    int i,j,k,sp=5,l;
+    for(i=1;i<=5;i++)
+    {
+        for(k=1;k<=sp;k++)
+        {
+            printf(" ");
+        }
+        for(j=i;j>=1;j--)
+        {
+            printf("%d",j);
+        }
+        for(l=2;l<=i;l++)
+        {
+            printf("%d",l);
+        }
+        printf("\n");
+        sp--;
+    }
+    return 0;
+}
+```
