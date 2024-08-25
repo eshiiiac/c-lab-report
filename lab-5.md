@@ -131,3 +131,26 @@ int main(){
 }
 
 ```
+
+# FIX THIS
+```
+#include <stdio.h>
+int main(){
+    char w[]="KATHMANDU";
+    int i,k,j,sp=0;
+  
+  	for(i=9;i<0;i-=2){
+  		for(k=0;k<=sp;k++){
+  			printf(" ");
+		  }
+		  for(j=4-1;j<=i;j++){
+		  	printf("%c",w[j]);
+		  }
+		  printf("\n");
+		  sp--;
+	  }
+  
+    return 0;
+}
+
+```
