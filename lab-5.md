@@ -79,3 +79,50 @@ else{
     return 0;
 }
 ```
+## 
+```
+N
+Ne
+Nep
+Nepa
+Nepal
+```
+```
+#include <stdio.h>
+#include <string.h>
+int main(){
+    char w[]="Nepal";
+    int i,j,k;
+    
+    for(i=0;i<=4;i++){
+    	for(j=0;j<=i;j++){
+    		printf("%c",w[j]);
+		}
+		printf("\n");
+	}
+
+    return 0;
+}
+```
+## fix this
+```
+#include <stdio.h>
+int main(){
+    char w[]="Nepal";
+    int i,k,j,sp=5;
+  
+  	for(i=0;i<3;i+=2){
+  		for(k=1;k<sp;k++){
+  			printf(" ");
+		  }
+		  for(j=0;j<i;j++){
+		  	printf("%c",w[j]);
+		  }
+		  printf("\n");
+		  sp--;
+	  }
+  
+    return 0;
+}
+
+```
