@@ -104,18 +104,23 @@ int main(){
     return 0;
 }
 ```
-## fix this
+## Q 5 B
+```
+  N
+ NEP
+NEPAL
+```
 ```
 #include <stdio.h>
 int main(){
     char w[]="Nepal";
     int i,k,j,sp=5;
   
-  	for(i=0;i<3;i+=2){
+  	for(i=0;i<5;i+=2){
   		for(k=1;k<sp;k++){
   			printf(" ");
 		  }
-		  for(j=0;j<i;j++){
+		  for(j=0;j<=i;j++){
 		  	printf("%c",w[j]);
 		  }
 		  printf("\n");
