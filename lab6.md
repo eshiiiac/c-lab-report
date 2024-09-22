@@ -93,3 +93,21 @@ int multiply(int a , int b){
 	return a+multiply(a,b-1);
 }
 ```
+
+# Dynamic memory allocation
+
+- The statement int a[100]; creates 100 memory blocks that occupy 100x2=200 or 100x4=400 bytes of memory.
+- However, during progeam execution this all these memory blocks may not be used or also the no. of memory blocks may not be sufficient 
+- this creates either wastage or shotage of memory blocks
+- to solve this problem, we use the concept of dynamic memory allocation
+- dma is a feature in c which allows to create required no of memory blocks at runtime which can be resized dynamically for optimum memory utilization
+- c provides 4 functions for dma
+	- malloc()
+	- calloc()
+   	- realloc()
+    	- free()
+  which are defines under  stdlib.h header file
+- malloc() and calloc() are used to allocate memory, malloc takes a single argument, calloc takes 2 arguments
+- malloc does not initialize the memory block with 0
+- realloc is used to resize memory allocated by callor or malloc
+- free is used to remove the dynamically allocated memory.
