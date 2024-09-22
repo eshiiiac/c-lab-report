@@ -111,3 +111,25 @@ int multiply(int a , int b){
 - malloc does not initialize the memory block with 0
 - realloc is used to resize memory allocated by callor or malloc
 - free is used to remove the dynamically allocated memory.
+
+## fix code
+```
+#include <stdio.h>
+int main{
+	int n, i, sum=0;
+	printf("enter the value of n: ");
+	scanf("%d",&n);
+	printf("enter %d numbers: ",n);
+	
+	int *p = (int *)malloc(n*4);
+	
+	for(i=0;i<n;i++){
+		scanf("%d", p);
+		sum+=p;
+		p++;
+	}
+	printf("sum= %d", sum);
+	free(p);
+return 0;}
+
+```
