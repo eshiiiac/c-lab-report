@@ -71,3 +71,25 @@ int fibb(int n){
 	 return fibb(n-2)+fibb(n-1);
 }
 ```
+
+### multiply 2 nums uding recursive func
+```
+#include <stdio.h>
+
+int multiply(int a, int b);
+
+int main(){
+	int a,b;
+	printf("nter 2 num: ");
+	scanf("%d%d",&a,&b);
+printf("%d ",multiply(a,b));
+}
+
+int multiply(int a , int b){
+	if (b==1){
+		return a;
+	}
+	else
+	return a+multiply(a,b-1);
+}
+```
