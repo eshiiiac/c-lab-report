@@ -102,7 +102,7 @@ void viewRecord(){
 	
 	
 	while(!feof(ptr1)){
-		fscanf(ptr1,"%d %s %s %d", &id,&name,&address,&salary);
+		fscanf(ptr1,"%d %s %s %d\n\n", &id,&name,&address,&salary);
 		printf("%d %s %s %d\n\n", id, name, address, salary);
 	}
 
@@ -119,13 +119,12 @@ void searchRecord(){
 	scanf("%d",&temp_name);
 	
 	while(!feof(ptr2)){
-		fscanf(ptr2,"%d %s %s %d", &id,&name,&address,&salary);
+		fscanf(ptr2,"%d %s %s %d\n\n", &id,&name,&address,&salary);
 		if(strcmpi(name,temp_name)==0){
 			printf("%d %s %s %d\n\n", id, name, address, salary);
 		}
 		else {
 			printf("User not found. Error 404\n\n");
-			break;
 		}
 	}
 
@@ -143,13 +142,12 @@ void deleteRecord(){
 	scanf("%d",&temp_id);
 	
 	while(!feof(ptr3)){
-		fscanf(ptr3,"%d %s %s %d", &id,&name,&address,&salary);
+		fscanf(ptr3,"%d %s %s %d\n\n", &id,&name,&address,&salary);
 		if(id!=temp_id){
-			fprintf(ptr3a,"%d %s %s %d\n\n", id, name, address, salary);
+			fprintf(ptr3a,"%d %s %s %d\n", id, name, address, salary);
 		}
 		else {
 			printf("User not found. Error 404\n\n");
-			break;
 		}
 	}
 	fclose(ptr3);
@@ -160,7 +158,7 @@ void deleteRecord(){
 }
 
 int main(){
-	while (1>0){
+	while (1){
 	int userChoice;
 	printf("1.Add Record\n2.View Record\n3.Search\n4.Delete\nEnter your choice: ");
 	scanf("%d",&userChoice);
@@ -182,9 +180,9 @@ int main(){
 		default:
 			printf("Invalid choice!(enter 1-4)\n\n");
 			
-		}
-	}
+		}}
 }
+
 ```
 
 
