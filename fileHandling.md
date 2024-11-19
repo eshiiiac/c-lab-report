@@ -45,7 +45,7 @@ if (strcmpi(name,name1)!=0){
 fprintf(ptr1,"%s %d %s\n",name, age, faculty);
 }
 	fclose(ptr);
-	fclose(ptr1);
+	fclose(ptr1);	
 	remove("data.txt");
 	rename("temp.txt","data.txt");
 	
@@ -78,3 +78,111 @@ fprintf(ptr1,"%s %d %s\n",name, age, faculty);
 	
 }
 ```
+### create  a menu driven program to add, view, search, delete records, (id name address salary)
+```
+#include<stdio.h>
+#include<string.h>
+
+void addRecord(){
+	int id, salary;
+	char name[20], address[20];
+
+	FILE *ptr = fopen("userData.txt","a");
+	
+	printf("Enter id, Name, address, salary: ");
+	scanf("%d %s %s %d", &id,&name,&address,&salary);
+	fprintf(ptr,"%d %s %s %d", id, name, address, salary);
+	fclose(ptr);
+}
+void viewRecord(){
+	int id, salary;
+	char name[20], address[20];
+
+	FILE *ptr1 = fopen("userData.txt","r");
+	
+	
+	while(!feof(ptr1)){
+		fscanf("%d %s %s %d", &id,&name,&address,&salary);
+		printf(ptr,"%d %s %s %d", id, name, address, salary);
+	}
+
+	fclose(ptr1);
+}
+void searchRecord(){
+	int id, salary;
+	char name[20], address[20], temp_name[20];
+
+	FILE *ptr2 = fopen("userData.txt","r");
+	
+	
+	printf("Search user data, enter id: ");
+	scanf("%d",&temp_name);
+	
+	while(!feof(ptr2)){
+		fscanf("%d %s %s %d", &id,&name,&address,&salary);
+		if(strcmpi(name,temp_name)==0){
+			printf(ptr2,"%d %s %s %d", id, name, address, salary);
+		}
+		else {
+			printf("User not found. Error 404");
+			break;
+		}
+	}
+
+	fclose(ptr2);
+}
+void deleteRecord(){
+	int id, salary, temp_id;
+	char name[20], address[20];
+
+	FILE *ptr3 = fopen("userData.txt","r");
+	FILE *ptr3a = fopen("tempUserData.txt","w");
+	
+	
+	printf("enter id to delete data: ");
+	scanf("%d",&temp_id);
+	
+	while(!feof(ptr3)){
+		fscanf("%d %s %s %d", &id,&name,&address,&salary);
+		if(id!=temp_id){
+			fprintf(ptr3a,"%d %s %s %d", id, name, address, salary);
+		}
+		else {
+			printf("User not found. Error 404");
+			break;
+		}
+	}
+	fclose(ptr3);
+	fclose(ptr3a);
+	remove("userData.txt");
+	rename("tempUserData.txt","userData.txt");
+	
+}
+
+int main(){
+	int userChoice;
+	printf("1.Add Record\n2.View Record\n3.Search\n4.Delete\nEnter your choice: ");
+	scanf("%d",&userChoice);
+	
+	switch(userChoice){
+	
+		case 1:
+			addRecord();
+			break;
+		case 2:
+			viewRecord();
+			break;
+		case 3:
+			searchRecord();
+			break;
+		case 4:
+			deleteRecord();
+			break;
+		default:
+			printf("Invalid choice!(enter 1-4)");
+			
+		}
+}
+```
+
+
