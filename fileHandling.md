@@ -82,6 +82,7 @@ fprintf(ptr1,"%s %d %s\n",name, age, faculty);
 ```
 #include<stdio.h>
 #include<string.h>
+#include<process.h>
 
 void addRecord(){
 	int id, salary;
@@ -177,11 +178,14 @@ int main(){
 		case 4:
 			deleteRecord();
 			break;
+		case 5:
+			exit(0);
 		default:
 			printf("Invalid choice!(enter 1-4)\n\n");
 			
 		}}
 }
+
 
 ```
 
