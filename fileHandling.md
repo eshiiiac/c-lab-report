@@ -188,5 +188,53 @@ int main(){
 
 
 ```
+### wap to store name, faculty age of student and store it in a structure var and store it into a file..(read and write)
 
+```
+#include <stdio.h>
+
+struct student
+{
+	char name[20],faculty[20];
+	int age;
+}stud;
+int main()
+{
+		FILE *ptr = fopen("studentData.txt","w");
+		printf("enter student name, faculty, age: ");
+		scanf("%s %d %s",&stud.name,&stud.faculty,&stud.age);
+		fwrite(&stud,sizeof(stud),1,ptr);
+		fclose(ptr);
+		return 0;
+}	D
+```
+
+### storing in an array of structure
+```
+#include <stdio.h>
+
+struct student
+{
+	char name[20],faculty[20];
+	int age;
+}stud[20];
+int main()
+{
+		int i,n;
+		FILE *ptr = fopen("studentData.txt","w");
+		
+		printf("enter the no. of students: ");
+		scanf("%d",&n);
+		
+		printf("enter student name, faculty, age: ");
+		for(i=0;i<n;i++){
+		scanf("%s %s %d",&stud[i].name,&stud[i].faculty,&stud[i].age);
+		fwrite(&stud[i],sizeof(stud),1,ptr);
+		}
+		
+		fclose(ptr);
+		return 0;
+		
+}
+```
 
