@@ -262,7 +262,9 @@ int main()
 		}
 		
 		fclose(ptr);
-						printf("done");
+		fclose(ptr1);
+		fclose(ptr2);
+		printf("done");
 
 		return 0;
 		
