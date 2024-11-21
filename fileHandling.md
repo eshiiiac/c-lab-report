@@ -270,3 +270,29 @@ int main()
 		
 }
 ```
+
+
+## notes
+### Random Access File
+- can be  use  to read & write at any positions ina file
+- - fseek(), ftell(), and rewind() methods are used
+
+#### fseek()
+syntax
+```
+int fseek(FILE *PTR, long int position, int origin)
+```
+- moves \the file pointer(cursor) to the specified position deom the origin
+- origin can be 0 (SEEK_SET), 1(SEEK_CUR), 2(SEEK_END)
+
+#### ftell()
+```
+long int ftell(FILE *ptr)
+```
+- returns the current position of file pointer
+
+#### rewind()
+```
+rewinf(FILE *ptr)
+```
+- moves the file ponter to the beginning of the file
