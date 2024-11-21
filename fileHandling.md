@@ -238,3 +238,33 @@ int main()
 }
 ```
 
+### read integers from a file and store odds and evens separately (oddnums.txt, evennums.txt)
+```
+#include <stdio.h>
+
+int main()
+{
+		int i,number;
+		FILE *ptr = fopen("numbers.txt","r");
+		FILE *ptr1 = fopen("evenNumbers.txt","w");
+		FILE *ptr2 = fopen("oddNumbers.txt","w");
+		
+		
+		while(!feof(ptr)){
+			fscanf(ptr,"%d\n",&number);
+			if (number%2==0){
+				fprintf(ptr1,"%d\n",number);	
+			}
+			else{
+				fprintf(ptr2,"%d\n",number);
+								
+			}
+		}
+		
+		fclose(ptr);
+						printf("done");
+
+		return 0;
+		
+}
+```
