@@ -60,3 +60,27 @@ getch();
 closegraph();
 }
 ```
+
+### concentric circle
+```
+#include<dos.h>
+for(i=1;i<=10,i++){
+setcolor(i);
+circle(100.100.100-i*5);
+delay(500);
+}
+```
+### ellipse 
+```
+ellipse(x,y,startangle,endangle,horz rad, vert radius);
+```
+
+### arc
+```
+arc(x,y,start angle, end angle, radius);
+```
+
+### outtext
+```
+outtext(text,x,y);
+```
