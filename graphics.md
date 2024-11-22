@@ -82,5 +82,7 @@ arc(x,y,start angle, end angle, radius);
 
 ### outtext
 ```
-outtext(text,x,y);
+settextstyle(8,0,5); // 8- font style, 0-horizontal, 5-size
+outtext(x,y,"text");
+
 ```
