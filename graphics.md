@@ -87,11 +87,25 @@ outtext(x,y,"text");
 
 ```
 ## to set fill style andfill the color
-``setfillstyle()`` sets the current fill pattern and fill color
-``floodfill()`` used to fill an enclosed area. Current fill pattern and fill color is used to fill the area.
+- ``setfillstyle()`` sets the current fill pattern and fill color
+   fill patterns:
+  - SOLID_FILL
+  - LTSLASH_FILL
+  - SLASH_FILL
+  - BKSLASH_FILL
+  - LINE_FILL
+  - HATCH_FILL
+- ``floodfill()`` used to fill an enclosed area. Current fill pattern and fill color is used to fill the area.
 
 ```
 void setfillstyle(int pattern, int color);
 void floodfill(int x, int y, int border_color);
+```
+
+```
+setfillstyle(SOLID_FILL);
+circle(100,100,50);
+floodfill(101,101,white);
+
 ```
 
