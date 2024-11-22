@@ -18,3 +18,45 @@ graphics mode for the selected graphics driver
 3. now draw the req shape by using the respective function
   for e.g. ``circle(100,100,50)``
 4. close the graphics mode by using ``closegraph()``;
+
+use ``ctrl + F9``
+### circle
+
+```
+#include <graphics.h>
+#include<conio.h>
+
+int main(){
+int gd = DETECT, gm;
+initgraph(&gd,&gm,"c:\\turboc3\\bgi");
+circle(100,100,50);
+getch();
+closegraph();
+}
+```
+### line
+```
+#include <graphics.h>
+#include<conio.h>
+
+int main(){
+int gd = DETECT, gm;
+initgraph(&gd,&gm,"c:\\turboc3\\bgi");
+line(int x1,int y1,int x2, int y2);
+getch();
+closegraph();
+}
+```
+### rectangle
+```
+#include <graphics.h>
+#include<conio.h>
+
+int main(){
+int gd = DETECT, gm;
+initgraph(&gd,&gm,"c:\\turboc3\\bgi");
+rectangle(int x, int y, int w, int h);
+getch();
+closegraph();
+}
+```
