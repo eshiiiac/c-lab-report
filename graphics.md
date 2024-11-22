@@ -86,3 +86,12 @@ settextstyle(8,0,5); // 8- font style, 0-horizontal, 5-size
 outtext(x,y,"text");
 
 ```
+## to set fill style andfill the color
+``setfillstyle()`` sets the current fill pattern and fill color
+``floodfill()`` used to fill an enclosed area. Current fill pattern and fill color is used to fill the area.
+
+```
+void setfillstyle(int pattern, int color);
+void floodfill(int x, int y, int border_color);
+```
+
